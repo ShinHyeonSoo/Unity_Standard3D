@@ -1,0 +1,158 @@
+{
+    "name": "PlayerInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "3351632c-d4a1-4d9b-b052-ff2518c78215",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "adce6dbc-1ad4-421d-b12a-ee39b6f526a1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "c1ea27a5-5259-426c-acd8-ddcae3b0e14c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "17ef36b2-4004-4eb2-b630-9b96ca109480",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "9f82417a-1833-405b-bcf2-43f9793602d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Settings",
+                    "type": "Button",
+                    "id": "45193d75-5007-45c1-8e86-fc4098b61870",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "e220ec2c-e6c9-4d87-b32d-b158b3655469",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d7425e01-1406-4774-9ab6-deb4708a4f61",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3f9b5e18-e0c6-4447-b70a-8f1c607e8c60",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "c2d93cb6-41a8-4660-8a5d-f1a7fbd61a4d",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6f09b81c-d40e-4a80-867d-5836a96632a6",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "0e87ecde-5244-41e1-a3cb-c6b81ee22755",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cd4135e-dc97-4672-b109-9e2ce8c79872",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26066564-d99e-4c72-a193-f9ea977c69be",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e427711-2cc0-45af-8272-8adfd91f5c06",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Settings",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
