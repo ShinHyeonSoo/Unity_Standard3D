@@ -12,13 +12,13 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     public UICondition _uiCondition;
 
     Condition Health { get { return _uiCondition._health; } }
-    Condition Stamina { get { return _uiCondition._stamina; } }
+    Condition MagicPoint { get { return _uiCondition._magicPoint; } }
 
     public event Action OnTakeDamage;
 
     void Update()
     {
-        Stamina.Add(Stamina._passiveValue * Time.deltaTime);
+        //MagicPoint.Add(MagicPoint._passiveValue * Time.deltaTime);
 
         if (Health._curValue == 0f)
         {
@@ -29,6 +29,11 @@ public class PlayerCondition : MonoBehaviour, IDamageable
     public void Heal(float amount)
     {
         Health.Add(amount);
+    }
+
+    public void RecoveryMP(float amount)
+    {
+        MagicPoint.Add(amount);
     }
 
     public void Die()
@@ -42,14 +47,14 @@ public class PlayerCondition : MonoBehaviour, IDamageable
         OnTakeDamage?.Invoke();
     }
 
-    public bool UseStamina(float amount)
+    public bool UseMP(float amount)
     {
-        if (Stamina._curValue - amount < 0f)
+        if (MagicPoint._curValue - amount < 0f)
         {
             return false;
         }
 
-        Stamina.Subtract(amount);
+        MagicPoint.Subtract(amount);
         return true;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class UICondition : MonoBehaviour
 {
     public Condition _health;
-    public Condition _stamina;
+    public Condition _magicPoint;
 
     // Start is called before the first frame update
     void Start()

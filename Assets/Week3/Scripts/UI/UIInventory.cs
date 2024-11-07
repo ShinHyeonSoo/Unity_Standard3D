@@ -160,7 +160,8 @@ public class UIInventory : MonoBehaviour
 
     void ThrowItem(ItemData data)
     {
-        Instantiate(data._dropPrefab, _dropPosition.position,
+        var item = Resources.Load<GameObject>($"Prefabs/{data._itemCode}");
+        Instantiate(item, _dropPosition.position,
             Quaternion.Euler(Vector3.one * Random.value * 360));
     }
 
@@ -199,6 +200,9 @@ public class UIInventory : MonoBehaviour
                 {
                     case ConsumableType.Health:
                         _condition.Heal(_selectedItem._consumables[i]._value);
+                        break;
+                    case ConsumableType.MagicPoint:
+                        _condition.RecoveryMP(_selectedItem._consumables[i]._value);
                         break;
                 }
             }

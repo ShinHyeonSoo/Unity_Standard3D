@@ -13,7 +13,7 @@ public enum ItemType
 public enum ConsumableType
 {
     Health,
-    Hunger
+    MagicPoint
 }
 
 [Serializable]
@@ -29,9 +29,9 @@ public class ItemData : ScriptableObject
     [Header("Info")]
     public string _displayName;
     public string _description;
+    public string _itemCode;
     public ItemType _type;
     public Sprite _icon;
-    public GameObject _dropPrefab;
 
     [Header("Stacking")]
     public bool _canStack;

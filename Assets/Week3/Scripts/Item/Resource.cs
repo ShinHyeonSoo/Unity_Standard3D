@@ -14,7 +14,8 @@ public class Resource : MonoBehaviour
         {
             if (_capacity <= 0) break;
             _capacity--;
-            Instantiate(_itemToGive._dropPrefab, hitPoint + Vector3.up, Quaternion.LookRotation(hitNormal, Vector3.up));
+            var item = Resources.Load<GameObject>($"Prefabs/{_itemToGive._itemCode}");
+            Instantiate(item, hitPoint + Vector3.up, Quaternion.LookRotation(hitNormal, Vector3.up));
         }
     }
 }

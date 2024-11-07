@@ -29,7 +29,7 @@ public class EquipTool : Equip
     {
         if (!_attacking)
         {
-            if (CharacterManager.Instance.Player.Condition.UseStamina(_useStamina))
+            if (CharacterManager.Instance.Player.Condition.UseMP(_useStamina))
             {
                 _attacking = true;
                 _animator.SetTrigger("Attack");

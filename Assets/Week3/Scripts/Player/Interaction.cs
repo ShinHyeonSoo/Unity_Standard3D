@@ -21,6 +21,8 @@ public class Interaction : MonoBehaviour
     void Start()
     {
         _camera = Camera.main;
+
+
     }
 
     void Update()
