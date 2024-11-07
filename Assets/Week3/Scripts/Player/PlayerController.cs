@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool _canLook = true;
 
     public event Action Setting;
+    public event Action Inventory;
 
     private Rigidbody _rigidbody;
     private void Awake()
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         _camCurXRot += _mouseDelta.y * _lookSensitivity;
         _camCurXRot = Mathf.Clamp(_camCurXRot, _minXLook, _maxXLook);
-        _cameraContainer.localEulerAngles = new Vector3(_camCurXRot, 0, 0);
+        _cameraContainer.localEulerAngles = new Vector3(-_camCurXRot, 0, 0);
 
         transform.eulerAngles += new Vector3(0, _mouseDelta.x * _lookSensitivity, 0);
     }
@@ -98,6 +99,15 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Started)
         {
             Setting?.Invoke();
+            ToggleCursor();
+        }
+    }
+
+    public void OnInventory(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Started)
+        {
+            Inventory?.Invoke();
             ToggleCursor();
         }
     }
